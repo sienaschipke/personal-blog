@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="./assets/css/form.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-<body>
+<body id="body">
     <header id="header">
         <nav id="nav-bar">
             <ul>
-                <li class="light">☀️</li>
+                <li id="mode-button" class="light">☀️</li>
             </ul>
         </nav>
     </header>
@@ -29,9 +29,12 @@
                 <input id="title" type="text">
                 <label for="content">Content</label>
                 <input type="textarea">
-                <button>Submit</button>
+                <button id="submit-btn">Submit</button>
             </form>
         </div>
     </main>
+    <script src="./assets/js/logic.js"></script>
+    <script src="./assets/js/form.js"></script>
+    <script src="./assets/js/blog.js"></script>
 </body>
 </html>

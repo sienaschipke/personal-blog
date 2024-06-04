@@ -22,6 +22,10 @@
     font-size: 30px;
  }
 
+ #nav-bar ul li:hover {
+    cursor: pointer;
+ }
+
 #main {
     display: flex;
     flex-direction: row;

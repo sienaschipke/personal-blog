@@ -1,0 +1,91 @@
+* {
+    display: border-box;
+    font-family: sans-serif;
+ }
+
+ #header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    border-bottom: 10px double black;
+ }
+
+ #nav-bar ul {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+ }
+
+ #nav-bar ul li {
+    list-style: none;
+    font-size: 30px;
+ }
+
+#main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+}
+
+.h1{
+    display: flex;
+    justify-content: center;
+    border-right: 10px double black;
+    padding-bottom: 110px;
+}
+
+ h1 {
+    background: linear-gradient(
+        #FFFFB7,
+        #FFF192,
+        #FFEA61,
+        #FFDD3C,
+        #FFD400
+    );
+    border-radius: 50%;
+    width: 50%;
+    margin: 50px;
+    color: white;
+    padding:  100px;
+    height: 300px;
+    width: 300px;
+    line-height: 300px;
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 1px 1px #555;
+ }
+
+ .form-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 700px;
+}
+
+.form-data h2 {
+    text-align: center;
+}
+
+ form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+ }
+
+ form label {
+    font-size: 12px;
+    padding: 10px 0;
+ }
+
+ input[type='textarea']{
+    height: 50px;
+ }
+
+ form button {
+    background-color: black;
+    color: white;
+    padding: 5px 0;
+    margin: 10px 0;
+ }

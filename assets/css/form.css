@@ -1,0 +1,33 @@
+.form-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 700px;
+}
+
+.form-data h2 {
+    text-align: center;
+}
+
+ form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+ }
+
+ form label {
+    font-size: 12px;
+    padding: 10px 0;
+ }
+
+ input[type='textarea']{
+    height: 50px;
+ }
+
+ form button {
+    background-color: black;
+    color: white;
+    padding: 5px 0;
+    margin: 10px 0;
+ }

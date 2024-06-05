@@ -4,7 +4,11 @@ const bodyEl = document.querySelector('#body');
 const submitBtn = document.querySelector('#submit-btn');
 const headerEl = document.querySelector('#header');
 const h1El = document.querySelector('.h1');
+const usernameInput = document.querySelector("#username");
+const titleInput = document.querySelector('#title');
+const contentInput = document.querySelector('#content');
 
+//FUNCTIONS
 // sun should change mode from light to dark
 const modeChange = function() {
     if (modeButton.className === 'light'){
@@ -26,11 +30,26 @@ const modeChange = function() {
         headerEl.style.borderBottom = '10px double black';
         h1El.style.borderRight = '10px double black';
     }
-}
-    // background-color: black;
-    // color: white;
+};
+
+const saveBlogPost = function(event) {
+    event.preventDefault();
+    
+    const blogPost = {
+        username: usernameInput.value,
+        title: titleInput.value,
+        content: contentInput.value
+    };
+
+    localStorage.setItem('blog post', JSON.stringify(blogPost));
+    usernameInput.value = "";
+    titleInput.value = "";
+    contentInput.value = "";
+
+    location.assign('file:///Users/sienaschipke/Bootcamp/Homeworks/personal-blog/blog.html');
+};
+
+//USER INTERACTIONS
 modeButton.addEventListener('click', modeChange);
+submitBtn.addEventListener('click', saveBlogPost);
 
-
-// submit button should load blog posts page and add the new blog post
-// when you press back, page returns to home page

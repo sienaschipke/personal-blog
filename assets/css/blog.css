@@ -3,3 +3,84 @@
    font-family: sans-serif;
 }
 
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+#header {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   border-bottom: 10px double black;
+   align-items: center;
+}
+
+#nav-bar ul {
+   display: flex;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+#nav-bar ul li {
+   list-style: none;
+   font-size: 30px;
+   margin: 0 10px
+}
+
+#nav-bar ul li:hover {
+   cursor: pointer;
+}
+
+#back-button {
+   background-color: black;
+   color: white;
+ }
+
+.blog-card {
+   border: 1px solid black;
+   border-radius: 5px;
+   margin: 10px;
+   display: flex;
+   flex-direction: column;
+}
+
+.blog-header {
+   font-size: 15px;
+   margin: 10px;
+   border-bottom: 1px solid black;
+}
+
+.blog-content {
+   margin: 0;
+   padding-left: 15px;
+   font-style: italic;
+   font-size: 12px;
+}
+
+.blog-author {
+   margin: 50px 10px 10px 10px;
+   font-size: 12px;
+}
+
+#footer {
+   border-top: 10px double black;
+   display: flex;
+   flex-direction: column;
+}
+
+#footer h3 {
+   text-align: center;
+   font-weight: 300px;
+}
+
+
+#footer ul li{
+   list-style: none;
+}
+
+.bold {
+   font-weight: 800;
+}

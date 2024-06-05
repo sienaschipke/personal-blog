@@ -1,0 +1,1 @@
+//when adding each element to the blog page, make sure to add the corresponding class for the CSS

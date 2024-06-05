@@ -49,7 +49,9 @@ const saveBlogPost = function(event) {
     location.assign('file:///Users/sienaschipke/Bootcamp/Homeworks/personal-blog/blog.html');
 };
 
+
 //USER INTERACTIONS
 modeButton.addEventListener('click', modeChange);
 submitBtn.addEventListener('click', saveBlogPost);
+
 

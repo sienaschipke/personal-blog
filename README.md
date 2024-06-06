@@ -10,7 +10,7 @@ This project is usefull for anyone who would like to create and store blog posts
 
 ## Images
 ![website screenshot](./assets/Screenshot%202024-06-06%20at%204.26.50%E2%80%AFPM.png)
-![website screenshot](./Assets/Screenshot%202024-06-06%20at%204.27.16 PM.png)
+![website screenshot](./assets/Screenshot%202024-06-06%20at%204.27.16%E2%80%AFPM.png)
 
 ## URL
 [Personal Blog](https://sienaschipke.github.io/personal-blog/)

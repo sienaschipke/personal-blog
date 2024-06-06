@@ -9,7 +9,7 @@ The objective of this project was to utilize local storage and JavaScript to upl
 This project is usefull for anyone who would like to create and store blog posts - or other information.
 
 ## Images
-![website screenshot](./Assets/Screenshot%202024-06-06%20at%204.26.50 PM.png)
+![website screenshot](./assets/Screenshot%202024-06-06%20at%204.26.50%E2%80%AFPM.png)
 ![website screenshot](./Assets/Screenshot%202024-06-06%20at%204.27.16 PM.png)
 
 ## URL

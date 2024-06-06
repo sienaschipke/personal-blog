@@ -9,8 +9,7 @@ const titleInput = document.querySelector('#title');
 const contentInput = document.querySelector('#content');
 
 //DATA
-const posts = [];
-let blogPost = {};
+
 
 //FUNCTIONS
 // sun should change mode from light to dark
@@ -36,31 +35,9 @@ const modeChange = function() {
     }
 };
 
-const saveBlogPost = function(event) {
-    event.preventDefault();
 
-    if (usernameInput.value === "" || titleInput.value === "" || contentInput.value === ""){
-        alert("You missed some entries. Please try again.");
-    } else {
-        blogPost = {
-            username: usernameInput.value,
-            title: titleInput.value,
-            content: contentInput.value
-        };
-        posts.push(blogPost);
-        console.log(posts);
-    
-        localStorage.setItem('blog post', JSON.stringify(posts));
-        usernameInput.value = "";
-        titleInput.value = "";
-        contentInput.value = "";
-    
-        location.assign('file:///Users/sienaschipke/Bootcamp/Homeworks/personal-blog/blog.html');
-    };
-};
 
 //USER INTERACTIONS
 modeButton.addEventListener('click', modeChange);
-submitBtn.addEventListener('click', saveBlogPost);
 
 

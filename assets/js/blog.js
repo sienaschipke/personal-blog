@@ -38,8 +38,7 @@ function renderPosts() {
         authorDiv.textContent = `Posted by: ${post.username}`;
         postDiv.append(titleH2, contentP, authorDiv);
   }
-}
-
+};
 
 // sun should change mode from light to dark
 const modeChange = function() {
@@ -64,11 +63,9 @@ const modeChange = function() {
     }
 };
 
-const toHomePage = function() {
+const toHomePage = function() {    
     location.assign('file:///Users/sienaschipke/Bootcamp/Homeworks/personal-blog/index.html');
 };
-
-//when adding each element to the blog page, make sure to add the corresponding class for the CSS
 
 //USER INTERACTIONS
 backBtn.addEventListener('click', toHomePage);

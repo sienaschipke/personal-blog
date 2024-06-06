@@ -1,10 +1,7 @@
 //DEPENDENCIES
-// const submitBtn = document.querySelector('#submit-btn');
-
 
 //DATA
-const posts = [];
-// let blogPost = {};
+let posts;
 
 //FUNCTIONS
 const saveBlogPost = function(event) {
@@ -18,8 +15,10 @@ const saveBlogPost = function(event) {
             title: titleInput.value,
             content: contentInput.value
         };
+
+        const postsJSON = localStorage.getItem('blog post');
+        posts = postsJSON ? JSON.parse(postsJSON) : [];
         posts.push(blogPost);
-        console.log(posts);
     
         localStorage.setItem('blog post', JSON.stringify(posts));
         usernameInput.value = "";
@@ -31,16 +30,3 @@ const saveBlogPost = function(event) {
 };
 
 submitBtn.addEventListener('click', saveBlogPost);
-
-
-
-// store form input in local storage
-
-// submit button should load blog posts page and add the new blog post
-
-
-
-
-
-
-// when you press back, page returns to home page

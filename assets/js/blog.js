@@ -3,21 +3,17 @@ const backBtn = document.querySelector('#back-button');
 const modeButton = document.querySelector('#mode-button');
 const bodyEl = document.querySelector('#body');
 const headerEl = document.querySelector('#header');
-const blogCard = document.querySelector('.blog-card');
-const blogTitle = document.querySelector('.blog-header');
+const blogCard = document.querySelectorAll('.blog-card');
+const blogTitle = document.querySelectorAll('.blog-header');
 const footerEl =document.querySelector('#footer');
 const mainEl = document.querySelector('#main');
 
 //DATA
-
+let posts;
 //FUNCTIONS
 function init() {
-    const storedPosts = JSON.parse(localStorage.getItem('blog post'));
-    
-    if (storedPosts !== null) {
-      posts = storedPosts;
-    };
-
+    const postsJSON = localStorage.getItem('blog post');
+    posts = postsJSON ? JSON.parse(postsJSON) : [];
     renderPosts();
   };
 
@@ -40,7 +36,6 @@ function renderPosts() {
   }
 };
 
-// sun should change mode from light to dark
 const modeChange = function() {
     if (modeButton.className === 'light'){
         modeButton.textContent = '🌙';
@@ -48,18 +43,18 @@ const modeChange = function() {
         bodyEl.style.backgroundColor = 'black';
         bodyEl.style.color = 'white';
         headerEl.style.borderBottom = '10px double white';
-        blogCard.style.backgroundColor = 'dimgrey'
+        blogCard.style.backgroundColor = 'dimgrey';
         blogCard.style.border = '1px solid white';
-        footerEl.style.borderTop = '10px double white'
+        footerEl.style.borderTop = '10px double white';
     } else {
         modeButton.textContent = '☀️';
         modeButton.className = 'light';
         bodyEl.style.backgroundColor = 'white';
         bodyEl.style.color = 'black';
         headerEl.style.borderBottom = '10px double black';
-        blogCard.style.backgroundColor = 'white'
+        blogCard.style.backgroundColor = 'white';
         blogCard.style.border = '1px solid black';
-        footerEl.style.borderTop = '10px double black'
+        footerEl.style.borderTop = '10px double black';
     }
 };
 

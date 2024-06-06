@@ -10,9 +10,7 @@ const contentInput = document.querySelector('#content');
 
 //DATA
 
-
 //FUNCTIONS
-// sun should change mode from light to dark
 const modeChange = function() {
     if (modeButton.className === 'light'){
         modeButton.textContent = '🌙';
@@ -34,8 +32,6 @@ const modeChange = function() {
         h1El.style.borderRight = '10px double black';
     }
 };
-
-
 
 //USER INTERACTIONS
 modeButton.addEventListener('click', modeChange);

@@ -3,14 +3,44 @@ const backBtn = document.querySelector('#back-button');
 const modeButton = document.querySelector('#mode-button');
 const bodyEl = document.querySelector('#body');
 const headerEl = document.querySelector('#header');
-// const h1El = document.querySelector('.h1');
 const blogCard = document.querySelector('.blog-card');
 const blogTitle = document.querySelector('.blog-header');
-// const blogContent = document.querySelector('.blog-content');
-// const blogAuthor = document.querySelector('.blog-author');
 const footerEl =document.querySelector('#footer');
+const mainEl = document.querySelector('#main');
+
+//DATA
 
 //FUNCTIONS
+function init() {
+    const storedPosts = JSON.parse(localStorage.getItem('blog post'));
+    
+    if (storedPosts !== null) {
+      posts = storedPosts;
+    };
+
+    renderPosts();
+  };
+
+function renderPosts() {
+    for (const post of posts) {
+        console.log(post);
+        const postDiv = document.createElement('div');
+        postDiv.className = 'blog-card';
+        mainEl.appendChild(postDiv);
+        const titleH2 = document.createElement('h2');
+        titleH2.className = 'blog-header';
+        const contentP = document.createElement('p');
+        contentP.className = 'blog-content';
+        const authorDiv = document.createElement('div');
+        authorDiv.className = 'blog-author';
+        titleH2.textContent = post.title;
+        contentP.textContent = post.content;
+        authorDiv.textContent = `Posted by: ${post.username}`;
+        postDiv.append(titleH2, contentP, authorDiv);
+  }
+}
+
+
 // sun should change mode from light to dark
 const modeChange = function() {
     if (modeButton.className === 'light'){
@@ -38,12 +68,10 @@ const toHomePage = function() {
     location.assign('file:///Users/sienaschipke/Bootcamp/Homeworks/personal-blog/index.html');
 };
 
+//when adding each element to the blog page, make sure to add the corresponding class for the CSS
+
 //USER INTERACTIONS
 backBtn.addEventListener('click', toHomePage);
 modeButton.addEventListener('click', modeChange);
+init();
 
-
-
-
-
-//when adding each element to the blog page, make sure to add the corresponding class for the CSS

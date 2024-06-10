@@ -59,7 +59,7 @@ const modeChange = function() {
 };
 
 const toHomePage = function() {    
-    location.assign('../../index.html');
+    location.assign('./index.html');
 };
 
 //USER INTERACTIONS

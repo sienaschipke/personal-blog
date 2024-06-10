@@ -25,7 +25,7 @@ const saveBlogPost = function(event) {
         titleInput.value = "";
         contentInput.value = "";
     
-        location.assign('../../blog.html');
+        location.assign('./blog.html');
     };
 };
 

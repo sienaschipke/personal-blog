@@ -59,7 +59,7 @@ const modeChange = function() {
 };
 
 const toHomePage = function() {    
-    location.assign('file:///Users/sienaschipke/Bootcamp/Homeworks/personal-blog/index.html');
+    location.assign('../../index.html');
 };
 
 //USER INTERACTIONS
